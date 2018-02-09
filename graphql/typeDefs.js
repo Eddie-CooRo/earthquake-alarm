@@ -64,4 +64,4 @@ export default `
         LT
         EQ
     }
-`
+`;

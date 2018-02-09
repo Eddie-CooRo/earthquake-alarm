@@ -31,15 +31,15 @@ const params = {
   secretOrKey: jwtOptions.jwtSecret,
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
 };
-let strategy = new Strategy(params, async (payload,done)=>{
-  models.User.read(payload.id, (err,user)=>{
-    if(err){
-      return done(err,null);
+let strategy = new Strategy(params, async (payload, done) => {
+  models.User.read(payload.id, (err, user) => {
+    if (err) {
+      return done(err, null);
     } else {
-      if(user){
-        return done(null, user); 
+      if (user) {
+        return done(null, user);
       } else {
-        return done(new Error("User not found"),null);
+        return done(new Error('User not found'), null);
       }
     }
   });
@@ -57,17 +57,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-app.use('/graphql', graphqlAuthenticate, (req,res,next)=>{
+app.use('/graphql', graphqlAuthenticate, (req, res, next) => {
   let context = {
-    login,
+    login
   };
-  if(req.user) context.user = req.user;
+  if (req.user) context.user = req.user;
   return graphqlHttp({
     schema: graphqlSchema,
-    context:context,
+    context: context,
     graphiql: process.env.NODE_ENV === 'development',
-    pretty:true
-   })(req,res,next)
+    pretty: true
+  })(req, res, next);
 });
 
 // catch 404 and forward to error handler
