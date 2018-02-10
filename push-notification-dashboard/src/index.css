@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  height: 10000px;
+  background-color: aqua;
   font-family: sans-serif;
 }

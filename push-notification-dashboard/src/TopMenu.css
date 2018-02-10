@@ -1,0 +1,34 @@
+.top-menu {
+  background-color: red;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: [start] 40px 1fr auto [first-span] repeat(5, 40px);
+}
+
+#top-menu-search-form {
+  height: 100%;
+  box-sizing: content-box;
+}
+
+#top-menu-search-form input {
+  -webkit-appearance: none;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+#top-menu-search-form input[type="submit"] {
+  display: none;
+}
+
+.top-menu-item {
+  background-color: black;
+}
+
+.top-menu span:first-of-type {
+    grid-column: first-span;
+}
