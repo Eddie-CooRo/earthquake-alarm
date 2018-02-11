@@ -2,11 +2,16 @@
   "name": "push-notification-dashboard",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:3001/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "react": "^16.2.0",
+    "react-burger-menu": "^2.2.3",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-icons": "^2.2.7",
+    "react-interactive": "^0.8.1",
+    "react-scripts": "1.1.0",
+    "react-svg-morph": "^0.2.1",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

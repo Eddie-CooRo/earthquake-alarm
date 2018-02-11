@@ -1,0 +1,21 @@
+#app {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(max-content, 60px) 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "nav top-bar"
+    "nav main";
+}
+
+#topmenu-container {
+  grid-area: top-bar;
+}
+
+#navbar-container {
+  grid-area: nav;
+}
+
+#app.menuOpened {
+  grid-template-columns: 300px 1fr;
+}

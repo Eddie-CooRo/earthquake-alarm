@@ -57,7 +57,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-console.log(process.env.NODE_ENV)
 app.use('/graphql', graphqlAuthenticate, (req, res, next) => {
   let context = {
     login

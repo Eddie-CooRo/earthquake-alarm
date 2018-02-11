@@ -6,6 +6,19 @@ body {
   margin: 0;
   padding: 0;
   height: 10000px;
-  background-color: aqua;
+  background-color: white;
   font-family: sans-serif;
+}
+
+#nosupport {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: red;
+  text-align: center;
+}
+
+#root {
+  height: 100%;
 }

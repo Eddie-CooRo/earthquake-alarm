@@ -8,6 +8,11 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
+
+    <script src="./modernizr.js"></script>
+    <!-- polyfill.io -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <!--
@@ -26,6 +31,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <h1 id="nosupport">Please update your browser in order to see this website!</h1>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -37,4 +43,8 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+<script>if(!Modernizr.cssgrid){
+  document.getElementById("root").style.display = "none";
+  document.getElementById("nosupport").style.display = "block";
+}</script>
 </html>
