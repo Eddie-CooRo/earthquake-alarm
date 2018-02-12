@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import TopMenu from './TopMenu/';
 import Navbar from './Navbar/index';
-import { push as Menu } from 'react-burger-menu';
 
 class App extends Component {
   render() {

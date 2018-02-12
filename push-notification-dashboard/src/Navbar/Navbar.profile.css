@@ -1,7 +1,8 @@
 .profile-container {
   height: 100%;
   width: 60px;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   transition: width 0.75s ease-in-out,margin 0.75s ease-in-out;
   float: right;
 }
@@ -32,6 +33,7 @@
 .profile-container.open {
   width: 100%;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .profile-container.open .profile-details {

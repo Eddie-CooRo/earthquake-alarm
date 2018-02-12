@@ -29,10 +29,6 @@
   z-index: 15;
 }
 
-#navbar-items * {
-  direction: ltr;
-}
-
 /* #navbar.open #navbar-items {
   grid-template-areas:
       '. . toggleButton'
