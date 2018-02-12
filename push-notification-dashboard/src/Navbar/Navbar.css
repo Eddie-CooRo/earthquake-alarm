@@ -12,20 +12,25 @@
 }
 
 #navbar-items {
+  overflow: hidden;
   position: absolute;
   width: 300px;
   height: 100%;
   right: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 60px;
-    grid-template-rows: 60px 20px min-content 1fr;
-    grid-template-areas:
-      '. . toggleButton'
-      '. . .'
-      '. profile profile'
-      '. . .';
+  grid-template-columns: [start] 1fr 1fr 60px [end];
+  grid-template-rows: 60px repeat(5, min-content) 1fr;
+  grid-template-areas:
+    '. . toggleButton'
+    '. . .'
+    '. profile profile'
+    '. . .';
   background-color: #313131;
   z-index: 15;
+}
+
+#navbar-items * {
+  direction: ltr;
 }
 
 /* #navbar.open #navbar-items {
@@ -62,14 +67,6 @@
   width: 300px;
 }
 
-/* #navbar.open #navbar-items {
-  animation: openMenuLayout 0.75s 1 ease-in-out forwards;
-}
-
-#navbar.close #navbar-items {
-  animation: closeMenuLayout 0.75s 1 ease-in-out forwards;
-} */
-
 @keyframes openMenu {
   to {
     width: 300px;
@@ -93,46 +90,5 @@
   }
   to {
     opacity: 0.2;
-  }
-}
-
-@keyframes openMenuLayout {
-  1% {
-    grid-template-areas:
-      '. . toggleButton'
-      '. . .'
-      '. profile profile'
-      '. . .';
-  }
-  to {
-    grid-template-areas:
-      '. . toggleButton'
-      '. . .'
-      '. profile profile'
-      '. . .';
-  }
-}
-
-@keyframes closeMenuLayout {
-  from {
-    grid-template-areas:
-      '. . toggleButton'
-      '. . .'
-      '. profile profile'
-      '. . .';
-  }
-  1% {
-    grid-template-areas:
-      '. . toggleButton'
-      '. . .'
-      '. . profile'
-      '. . .';
-  }
-  to {
-    grid-template-areas:
-      '. . toggleButton'
-      '. . .'
-      '. . profile'
-      '. . .';
   }
 }

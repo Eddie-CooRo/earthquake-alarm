@@ -1,9 +1,13 @@
 .profile-container {
   height: 100%;
   width: 60px;
-  padding: 3%;
-  transition: width 0.75s ease-in-out;
+  margin-top: 50px;
+  transition: width 0.75s ease-in-out,margin 0.75s ease-in-out;
   float: right;
+}
+
+.profile-image-container {
+  padding: 0 7%;
 }
 
 .profile-image {
@@ -16,20 +20,22 @@
 }
 
 .profile-details {
-  margin: 5px 0;
+  margin: 7px 0;
   color: white;
   text-align: center;
   font-family: 'Open Sans', 'sans-serif';
   font-size: 0.7777em; /* 14px/18px */
   transition: all 0.75s ease-in-out;
+  word-wrap: break-word;
 }
 
 .profile-container.open {
   width: 100%;
+  margin-top: 10px;
 }
 
 .profile-container.open .profile-details {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 .profile-username {

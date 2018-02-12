@@ -6,7 +6,9 @@ class NavbarProfile extends Component {
     const stateClass = this.props.isOpen ? 'open' : 'close';
     return (
       <div className={'profile-container ' + stateClass}>
-        <div className="profile-image" />
+        <div className="profile-image-container">
+          <div className="profile-image" />
+        </div>
         <div className="profile-details">
           <p className="profile-username">Eddie CooRo</p>
         </div>

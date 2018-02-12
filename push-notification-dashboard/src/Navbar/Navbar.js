@@ -4,9 +4,16 @@ import './Navbar.css';
 import GridItem from '../pub/GridItem';
 import NavbarHamIcon from './Navbar.hamIcon';
 import Profile from './Navbar.profile';
-import { MdAccessAlarm } from 'react-icons/lib/md';
+import PerfectScroll from 'perfect-scrollbar';
 
 class Navbar extends Component {
+  componentDidMount = () => {
+    const ps = new PerfectScroll('#navbar-items', {
+      suppressScrollX: false,
+      wheelPropagation: true
+    });
+    console.log(ps);
+  };
   state = {
     isOpen: null
   };
@@ -41,7 +48,7 @@ class Navbar extends Component {
               icon={Profile}
               isOpen={this.state.isOpen}
               hover={{
-                backgroundColor: "#5c5c5c"
+                backgroundColor: '#5c5c5c'
               }}
               gridArea="profile"
               size="xlg"
