@@ -18,9 +18,9 @@ class TopMenu extends Component {
       <div className="top-menu">
         <TopMenuSearchForm />
         <GridItem icon={MdZoomOutMap} id="first-right" />
-        <GridItem icon={MdNotifications} badgeCount={2}/>
+        <GridItem icon={MdNotifications} badgeCount={3}/>
         <GridItem icon={MdChat} />
-        <GridItem icon={MdSettings} />
+        <GridItem icon={MdSettings} badgeCount={1}/>
         <GridItem icon={MdPowerSettingsNew} />
       </div>
     );
