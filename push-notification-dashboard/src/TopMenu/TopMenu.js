@@ -17,11 +17,21 @@ class TopMenu extends Component {
     return (
       <div className="top-menu">
         <TopMenuSearchForm />
-        <GridItem icon={MdZoomOutMap} id="first-right" />
-        <GridItem icon={MdNotifications} badgeCount={3}/>
-        <GridItem icon={MdChat} />
-        <GridItem icon={MdSettings} badgeCount={1}/>
-        <GridItem icon={MdPowerSettingsNew} />
+        <GridItem icon={MdZoomOutMap} hover={{
+                backgroundColor: "#d6d6d6"
+              }} id="first-right" />
+        <GridItem icon={MdNotifications} hover={{
+                backgroundColor: "#d6d6d6"
+              }} badgeCount={3}/>
+        <GridItem icon={MdChat} hover={{
+                backgroundColor: "#d6d6d6"
+              }} />
+        <GridItem icon={MdSettings} hover={{
+                backgroundColor: "#d6d6d6"
+              }} badgeCount={1}/>
+        <GridItem icon={MdPowerSettingsNew} hover={{
+                backgroundColor: "#d6d6d6"
+              }} />
       </div>
     );
   }

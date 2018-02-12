@@ -10,29 +10,50 @@ class GridItem extends Component {
       color: this.props.color || '#555'
     };
 
-    this.hoverStyle = {
-      backgroundColor: this.props.hoverBkColor || '#d6d6d6'
+    this.sizeMap = {
+      sm: '29%',
+      md: '19%',
+      lg: '9%',
+      xlg: '0%'
     };
   }
   render() {
-    const Icon = this.props.icon;
-    const badgeCount = this.props.badgeCount;
+    let {
+      hover,
+      icon,
+      gridArea,
+      badgeCount,
+      size,
+      style,
+      onClick,
+      id,
+      className,
+      ...rest
+    } = this.props;
 
-    console.log(this.props.gridArea);
+    const Icon = icon;
+    const padding = this.sizeMap[size] || this.sizeMap['sm'];
+    const hoverStyle = {
+      ...hover
+    }
+    const classNames = "grid-item " + className ? className : '';
     return (
       <Interactive
         as="span"
-        className="grid-item"
-        id={this.props.id}
-        onClick={this.props.onClick}
-        hover={this.hoverStyle}
+        id={id}
+        className={classNames}
+        onClick={onClick}
+        hover={hoverStyle}
         style={{
-          gridArea: this.props.gridArea
+          gridArea,
+          padding,
+          ...style
         }}
       >
-      
-        <Icon className="grid-item-icon" style={this.iconStyle} />
-        {!!badgeCount ? <span className="badge">{badgeCount}</span> : null}
+        <Icon className="grid-item-icon" style={this.iconStyle} {...rest} />
+        {!!badgeCount ? (
+          <span data-badge={badgeCount} className="badge" />
+        ) : null}
       </Interactive>
     );
   }

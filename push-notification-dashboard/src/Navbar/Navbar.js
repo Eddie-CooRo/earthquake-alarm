@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './Navbar.css';
 
 import GridItem from '../pub/GridItem';
+import NavbarHamIcon from './Navbar.hamIcon';
+import Profile from './Navbar.profile';
+import { MdAccessAlarm } from 'react-icons/lib/md';
 
 class Navbar extends Component {
   state = {
@@ -11,30 +14,38 @@ class Navbar extends Component {
   menuStyles = {};
 
   handleMenuToggle = () => {
-    this.menuClasses = !this.state.isOpen ? 'isOpen' : 'isClosed';
     this.stateClass = !this.state.isOpen ? 'open' : 'close';
     this.setState({ isOpen: !this.state.isOpen });
   };
 
-  closeMenu = ()=>{
-    this.menuClasses = 'isClosed';
+  closeMenu = () => {
     this.stateClass = 'close';
-    this.setState({isOpen: false});
-  }
+    this.setState({ isOpen: false });
+  };
 
   render() {
     return (
-      <div id="navbar" className={this.menuClasses}>
-        <div id="overlay" className={this.stateClass} onClick={this.closeMenu}>
-        </div>
+      <div id="navbar" className={this.stateClass}>
+        <div
+          id="overlay"
+          className={this.stateClass}
+          onClick={this.closeMenu}
+        />
         <div id="navbar-menu">
-          <div id="ham-icon-container" onClick={this.handleMenuToggle}>
-            <div id="ham-icon" className={this.stateClass}>
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
+          <div id="navbar-items">
+            <NavbarHamIcon
+              isOpen={this.state.isOpen}
+              onClick={this.handleMenuToggle}
+            />
+            <GridItem
+              icon={Profile}
+              isOpen={this.state.isOpen}
+              hover={{
+                backgroundColor: "#5c5c5c"
+              }}
+              gridArea="profile"
+              size="xlg"
+            />
           </div>
         </div>
       </div>
