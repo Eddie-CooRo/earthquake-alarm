@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MdSearch } from 'react-icons/lib/md';
 import './TopMenu.searchForm.css';
 
-class TopMenu extends Component {
+class SearchForm extends Component {
   render() {
     return (
       <div id="top-menu-search-container">
@@ -19,4 +19,4 @@ class TopMenu extends Component {
   }
 }
 
-export default TopMenu;
+export default SearchForm;

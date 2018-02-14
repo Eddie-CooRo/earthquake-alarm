@@ -8,11 +8,10 @@ import PerfectScroll from 'perfect-scrollbar';
 
 class Navbar extends Component {
   componentDidMount = () => {
-    const ps = new PerfectScroll('#navbar-items', {
+    new PerfectScroll('#navbar-items', {
       suppressScrollX: false,
       wheelPropagation: true
     });
-    console.log(ps);
   };
   state = {
     isOpen: null
@@ -45,7 +44,7 @@ class Navbar extends Component {
               onClick={this.handleMenuToggle}
             />
             <GridItem
-              icon={Profile}
+              Icon={Profile}
               isOpen={this.state.isOpen}
               hover={{
                 backgroundColor: '#5c5c5c'

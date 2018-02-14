@@ -10,6 +10,7 @@ import {} from 'react-icons/lib/fa';
 import './TopMenu.css';
 
 import TopMenuSearchForm from './TopMenu.searchForm';
+import NotifBox from './TopMenu.NotificationBox';
 import GridItem from '../pub/GridItem';
 
 class TopMenu extends Component {
@@ -18,7 +19,7 @@ class TopMenu extends Component {
       <div className="top-menu">
         <TopMenuSearchForm />
         <GridItem
-          icon={MdZoomOutMap}
+          Icon={MdZoomOutMap}
           hover={{
             backgroundColor: '#d6d6d6',
             cursor: 'pointer'
@@ -26,7 +27,8 @@ class TopMenu extends Component {
           id="first-right"
         />
         <GridItem
-          icon={MdNotifications}
+          Icon={MdNotifications}
+          TooltipContent={NotifBox}
           hover={{
             backgroundColor: '#d6d6d6',
             cursor: 'pointer'
@@ -34,14 +36,14 @@ class TopMenu extends Component {
           badgeCount={3}
         />
         <GridItem
-          icon={MdChat}
+          Icon={MdChat}
           hover={{
             backgroundColor: '#d6d6d6',
             cursor: 'pointer'
           }}
         />
         <GridItem
-          icon={MdSettings}
+          Icon={MdSettings}
           hover={{
             backgroundColor: '#d6d6d6',
             cursor: 'pointer'
@@ -49,7 +51,7 @@ class TopMenu extends Component {
           badgeCount={1}
         />
         <GridItem
-          icon={MdPowerSettingsNew}
+          Icon={MdPowerSettingsNew}
           hover={{
             backgroundColor: '#d6d6d6',
             cursor: 'pointer'

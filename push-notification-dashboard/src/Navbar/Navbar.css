@@ -23,7 +23,7 @@
   grid-template-areas:
     '. . toggleButton'
     '. . .'
-    '. profile profile'
+    'profile profile profile'
     '. . .';
   background-color: #313131;
   z-index: 15;

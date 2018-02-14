@@ -9,6 +9,13 @@
 
 .profile-image-container {
   padding: 0 7%;
+  transition: width 0.75s ease-in-out;
+  margin: auto;
+  width: 60px;
+}
+
+.profile-container.open .profile-image-container{
+  width: 150px;  
 }
 
 .profile-image {
