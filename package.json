@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start":
-      "concurrently \"node ./bin/www\" \"cd push-notification-dashboard && npm start\"",
-    "dev":
-      "concurrently \"nodemon ./bin/www\" \"cd push-notification-dashboard && npm start\"",
+    "start": "concurrently \"node ./bin/www\" \"cd push-notification-dashboard && npm start\"",
+    "dev": "concurrently \"nodemon ./bin/www\" \"cd push-notification-dashboard && npm start\"",
+    "init": "npm i && cd push-notification-dashboard && npm i",
     "dev-server": "nodemon ./bin/www"
   },
   "dependencies": {
