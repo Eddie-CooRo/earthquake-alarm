@@ -36,7 +36,7 @@ class TopMenu extends Component {
               <img
                 className="notification-image"
                 alt="notification"
-                src="http://localhost:3000/img/img.jpg"
+                src={profileImageAddress}
               />
             </div>
             <MdClose className="notification-close" />
@@ -53,7 +53,7 @@ class TopMenu extends Component {
               <img
                 className="notification-image"
                 alt="notification"
-                src="http://localhost:3000/img/img.jpg"
+                src={profileImageAddress}
               />
             </div>
             <MdClose className="notification-close" />
@@ -70,7 +70,7 @@ class TopMenu extends Component {
               <img
                 className="notification-image"
                 alt="notification"
-                src="http://localhost:3000/img/img.jpg"
+                src={profileImageAddress}
               />
             </div>
             <MdClose className="notification-close" />
@@ -87,7 +87,7 @@ class TopMenu extends Component {
               <img
                 className="notification-image"
                 alt="notification"
-                src="http://localhost:3000/img/img.jpg"
+                src={profileImageAddress}
               />
             </div>
             <MdClose className="notification-close" />
