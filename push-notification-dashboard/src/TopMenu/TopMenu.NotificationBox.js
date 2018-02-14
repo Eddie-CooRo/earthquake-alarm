@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { MdClose } from 'react-icons/lib/md';
 import './TopMenu.NotificationBox.css';
 
+import PerfectScroll from 'perfect-scrollbar';
 import ScrollBar from 'react-custom-scrollbars';
 
 class TopMenu extends Component {
   render() {
-    const profileImageAddress =
-      'http://' + window.location.host + '/img/img.jpg';
     return (
       <div className="notification-box">
         <ScrollBar
@@ -19,7 +18,7 @@ class TopMenu extends Component {
               <img
                 className="notification-image"
                 alt="notification"
-                src={profileImageAddress}
+                src="http://localhost:3000/img/img.jpg"
               />
             </div>
             <MdClose className="notification-close" />
